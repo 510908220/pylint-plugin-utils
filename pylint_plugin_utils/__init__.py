@@ -1,9 +1,5 @@
 import sys
-try:
-    from pylint.utils import UnknownMessage
-except ImportError:
-    from pylint.utils import UnknownMessageError as UnknownMessage
-
+from pylint.exceptions import UnknownMessageError
 
 def get_class(module_name, kls):
     parts = kls.split('.')
